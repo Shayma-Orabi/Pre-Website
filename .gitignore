@@ -1,0 +1,55 @@
+# Python
+_pycache_/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Django
+*.log
+*.pot
+*.pyc
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+
+# Environment
+.env
+.env.*
+venv/
+venv.bak/
+ENV/
+env/
+*.env
+*.venv
+*.bak
+*.swp
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# IDEs
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+
+# Migrations (optional — you might want to track these!)
+*/migrations/.pyc
+**/migrations/__pycache__/
