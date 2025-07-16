@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Abbu</title>
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;550;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Abbu</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  :root {
+    --screenWidthInPX: 1200px;
+    --screenWidthMobileInPX: 500px;
+  }
+</style>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;550;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- ===== NAVBAR ===== -->
-    <nav class="navbar">
+<div class="background-lines"></div> 
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
     <div class="nav-left">
-      <button class="nav-btn">FAQS</button>
-      <button class="nav-btn">العربية<img src="images/flag.png" alt="flag" class="flag-icon"></button>
+      <button class="nav-btn"> <span class="EN">FAQS</span> <span class="AR">الأسئلة الشائعة</span></button>
+      <button class="nav-btn"> <span class="EN">العربية</span> <img src="images/flag_AR.png" alt="flag" class="flag-icon EN">
+        <span class="AR">English</span><img src="images/flag_EN.png" alt="flag" class="flag-icon AR"></button>
     </div>
 
     <div class="nav-center">
@@ -24,19 +29,51 @@
     </div>
 
     <div class="nav-right">
-      <button class="contact-btn"> Contact Us →</button>
+      <button class="contact-btn"> <span class="EN">Contact Us</span> <span class="AR">تواصل معنا</span> →</button>
     </div>
   </nav>
 
   <!-- ===== MAIN CONTENT ===== -->
   <main class="main-container">
-    <!-- You will add objects/components here -->
+    <div class="image-grid">
+      <div class="image-container">
+        <a href="#">
+          <img src="images/Abbu_analytics.png" alt="Abbu Analytics">
+          <div class="overlay">
+            <p class="EN">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="AR">عربي</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="image-container">
+        <a href="#">
+          <img src="images/Abbu_consultation.png" alt="Abbu Consultation">
+          <div class="overlay">
+            <p class="EN">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="AR">عربي</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="image-container">
+        <a href="#">
+          <img src="images/Abuu_werehouse.png" alt="Abbu Warehouse">
+          <div class="overlay">
+            <p class="EN">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="AR">عربي</p>
+          </div>
+        </a>
+      </div>
+    </div>
   </main>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    
+    <img src="images/Screenshot 2025-07-15 233902.png" alt="abbu footer" class="footer-img">
   </footer>
 
+ 
+<script src="index.js" defer></script>
 </body>
 </html>
