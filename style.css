@@ -76,6 +76,15 @@ body, html {
   
 }
 
+/* Arabic flag */
+.flag-icon {
+  width: 30px;
+  height: auto;
+  margin-bottom: 2px;
+  margin-left: 5px;
+  vertical-align:middle;
+}
+
 /* Main content placeholder */
 .main-container {
   min-height: calc(100vh - 200px);
