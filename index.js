@@ -1,9 +1,9 @@
+// === Background Lines Animation ===
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.querySelector('.background-lines');
   const backgrounds = ['#E57F54', '#1AA69D', '#E3AE6D', '#F2EED5'];
   const largeNums = [30, 35, 40, 50];
   const smallNums = [3, 4, 5, 6];
-
   const coordinates = { x: undefined, y: undefined };
 
   const rand = () => Math.floor(Math.random() * 4);
@@ -31,17 +31,16 @@ document.addEventListener('DOMContentLoaded', () => {
     el.style.left = coordinates.x + 'px';
     el.style.top = coordinates.y + 'px';
     container.appendChild(el);
-    setTimeout(() => el.remove(), 5000); // Optional: clean up after 5s
+    setTimeout(() => el.remove(), 5000);
   };
 
   const updateCoords = (e) => {
-    if (coordinates.x === undefined || coordinates.y === undefined) {
-      coordinates.x = e.clientX;
-      coordinates.y = e.clientY;
-      addLine();
-    }
-
-    if (Math.abs(coordinates.x - e.clientX) > 50 || Math.abs(coordinates.y - e.clientY) > 50) {
+    if (
+      coordinates.x === undefined ||
+      coordinates.y === undefined ||
+      Math.abs(coordinates.x - e.clientX) > 50 ||
+      Math.abs(coordinates.y - e.clientY) > 50
+    ) {
       coordinates.x = e.clientX;
       coordinates.y = e.clientY;
       addLine();
@@ -50,21 +49,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('mousemove', updateCoords);
 });
+
+// === Set Responsive Screen Width Variables ===
 function updateScreenWidthVars() {
-  let width =
+  const width =
     window.innerWidth ||
     document.documentElement.clientWidth ||
     document.body.clientWidth;
 
-  document.documentElement.style.setProperty(
-    '--screenWidthInPX',
-    (width < 1700 ? width : 1700) + 'px'
-  );
-  document.documentElement.style.setProperty(
-    '--screenWidthMobileInPX',
-    (width <= 775 ? width : 775) + 'px'
-  );
+  const max = width < 1700 ? width : 1700;
+  const mobile = width <= 775 ? width : 770;
+
+  document.documentElement.style.setProperty('--screenWidthInPX', max + 'px');
+  document.documentElement.style.setProperty('--screenWidthMobileInPX', mobile + 'px');
 }
 
-window.addEventListener('load', updateScreenWidthVars);
+// Run on load and resize
+updateScreenWidthVars();
 window.addEventListener('resize', updateScreenWidthVars);
+
+// === Language Switcher ===
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.getElementById('language-toggle');
+  const enElements = document.querySelectorAll('.EN');
+  const arElements = document.querySelectorAll('.AR');
+  let currentLanguage = 'EN';
+
+  function switchLanguage() {
+    if (currentLanguage === 'EN') {
+      enElements.forEach((el) => (el.style.display = 'none'));
+      arElements.forEach((el) => (el.style.display = 'inline'));
+      currentLanguage = 'AR';
+    } else {
+      enElements.forEach((el) => (el.style.display = 'inline'));
+      arElements.forEach((el) => (el.style.display = 'none'));
+      currentLanguage = 'EN';
+    }
+  }
+
+  // Initialize language display
+  enElements.forEach((el) => (el.style.display = 'inline'));
+  arElements.forEach((el) => (el.style.display = 'none'));
+
+  // Attach toggle
+  toggleButton.addEventListener('click', switchLanguage);
+});

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
 :root {
   --abbu-blue: #292562;
   --abbu-green: #1AA69D;
@@ -6,6 +7,8 @@
   --abbu-orange: #E57F54;
   --abbu-gold: #E3AE6D;
   --abbu-brown: #885E2A;
+  --screenWidthInPX: 1200px;
+  --screenWidthMobileInPX: 500px;
 }
 
 * {
@@ -20,7 +23,6 @@ body, html {
   height: 100%;
   background-color: var(--abbu-blue); 
   color: var(--abbu-sand);
-  overflow: hidden;
 }
 
 .navbar {
@@ -88,9 +90,10 @@ body, html {
 }
 
 .main-container {
-  padding: calc( 100* var(--screenWidthInPX) / 1920) 0 0;
+  padding: calc( 150* var(--screenWidthInPX) / 1920) 0 0;
   position: relative;
   overflow: hidden;
+  height: 80%;
 }
 
 .image-grid {
@@ -158,14 +161,13 @@ body, html {
 }
 .footer{
   z-index: 0;
+  position: relative;
 }
 .footer-img {
   width: 100%;
   object-fit: cover;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 0;
+  display: block;
+  position: static;
 }
 
 
@@ -216,4 +218,85 @@ body, html {
   100% {
     transform: scaleY(1);
   }
+}
+.shadow-object {
+  filter: drop-shadow(0 0 10px rgba(1, 1, 1, 2));
+}
+
+.AR{
+  display: none;
+  font-family: "El Messiri", sans-serif;
+}
+#EN{
+  font-family:'Alegreya Sans', sans-serif ;
+}
+#AR{
+  font-family:"El Messiri", sans-serif ;
+}
+@media only screen and (max-width: 775px){
+  *{
+    letter-spacing: 0.5px;
+  }
+.navbar{
+    padding: calc( 18* var(--screenWidthMobileInPX) / 775) calc( 40* var(--screenWidthMobileInPX) / 775) 0;
+}
+.nav-left {
+  gap: calc( 30* var(--screenWidthMobileInPX) / 775);
+  margin-left: calc( 20* var(--screenWidthMobileInPX) / 775);
+}
+.nav-btn {
+  font-size: calc( 18* var(--screenWidthMobileInPX) / 775);
+}
+.nav-center {
+  margin-top: calc( 15* var(--screenWidthMobileInPX) / 775);
+}
+.logo {
+  max-height: calc( 80* var(--screenWidthMobileInPX) / 775);
+}
+.nav-right {
+  gap: calc( 15* var(--screenWidthMobileInPX) / 775);
+  margin-right: calc( 30* var(--screenWidthMobileInPX) / 775);
+}
+.contact-btn {
+  padding: calc( 10* var(--screenWidthMobileInPX) / 775) calc( 20* var(--screenWidthMobileInPX) / 775);
+  font-size: calc( 16* var(--screenWidthMobileInPX) / 775);}
+  .image-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: calc( 20* var(--screenWidthMobileInPX) / 775);
+  }
+  .image-container {
+    height: calc( 200* var(--screenWidthMobileInPX) / 775);
+  }
+  .image-container img {
+    border-radius: calc( 10* var(--screenWidthMobileInPX) / 775);
+  }
+  .flag-icon {
+    width: calc( 30* var(--screenWidthMobileInPX) / 775);
+    margin-left: calc( 3* var(--screenWidthMobileInPX) / 775);
+  }
+  .overlay p {
+    font-size: calc( 16* var(--screenWidthMobileInPX) / 775);
+  }
+  .main-container {
+    padding: calc( 100* var(--screenWidthMobileInPX) / 775) 0;
+    height: auto;
+  }
+
+.line {
+  display: none;
+}
+
+.background-lines {
+  display: none;
+}
+
+
+.line-wide {
+  display: none;
+}
+
+.line-high {
+  display: none;
+}
 }

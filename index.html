@@ -2,14 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Abbu</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-  :root {
-    --screenWidthInPX: 1200px;
-    --screenWidthMobileInPX: 500px;
-  }
-</style>
   <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;550;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -17,8 +13,11 @@
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar">
     <div class="nav-left">
-      <button class="nav-btn">FAQS</button>
-      <button class="nav-btn">العربية<img src="images/flag.png" alt="flag" class="flag-icon"></button>
+      <button class="nav-btn"> <span class="EN">FAQS</span> <span class="AR">الأسئلة الشائعة</span></button>
+      <button class="nav-btn" id="language-toggle" >
+         <span id="AR" class="EN">العربية</span>
+          <img src="images/flag_AR.png" alt="flag" class="flag-icon EN">
+        <span id="EN"  class="AR">English</span><img src="images/flag_EN.png" alt="flag" class="flag-icon AR"></button>
     </div>
 
     <div class="nav-center">
@@ -28,7 +27,7 @@
     </div>
 
     <div class="nav-right">
-      <button class="contact-btn"> Contact Us →</button>
+      <button class="contact-btn"> <span class="EN">Contact Us</span> <span class="AR">تواصل معنا</span> →</button>
     </div>
   </nav>
 
@@ -39,7 +38,8 @@
         <a href="#">
           <img src="images/Abbu_analytics.png" alt="Abbu Analytics">
           <div class="overlay">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.!</p>
+            <p class="EN">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="AR">عربي</p>
           </div>
         </a>
       </div>
@@ -48,7 +48,8 @@
         <a href="#">
           <img src="images/Abbu_consultation.png" alt="Abbu Consultation">
           <div class="overlay">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="EN">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="AR">عربي</p>
           </div>
         </a>
       </div>
@@ -57,7 +58,8 @@
         <a href="#">
           <img src="images/Abuu_werehouse.png" alt="Abbu Warehouse">
           <div class="overlay">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="EN">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="AR">عربي</p>
           </div>
         </a>
       </div>
