@@ -50,3 +50,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('mousemove', updateCoords);
 });
+function updateScreenWidthVars() {
+  let width =
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
+
+  document.documentElement.style.setProperty(
+    '--screenWidthInPX',
+    (width < 1700 ? width : 1700) + 'px'
+  );
+  document.documentElement.style.setProperty(
+    '--screenWidthMobileInPX',
+    (width <= 775 ? width : 775) + 'px'
+  );
+}
+
+window.addEventListener('load', updateScreenWidthVars);
+window.addEventListener('resize', updateScreenWidthVars);
