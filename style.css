@@ -1,0 +1,101 @@
+/* Root Variables */
+:root {
+  --abbu-blue: #292562;
+  --abbu-green: #1AA69D;
+  --text-dark: #1E1E1E;
+  --abbu-sand: #F2EED5;
+  --abbu-orange: #E57F54;
+  --abbu-gold: #E3AE6D;
+  --abbu-brown: #885E2A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  background-color: var(--abbu-blue); 
+  color: var(--abbu-sand);
+  overflow: hidden;
+}
+
+#header-wrap {
+  background-color: var(--abbu-blue);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 2rem;
+  padding: 1rem 2rem;
+  background-color: var(--abbu-blue);
+  width: 100%;
+}
+
+/* Left Buttons */
+.nav-left {
+  display: flex;
+  gap: 3rem;
+  margin-left: 2rem;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: var(--abbu-sand);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.nav-btn:hover {
+  opacity: 0.8;
+}
+
+/* Center Logo */
+.nav-center {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.logo {
+  max-height: 80px;
+}
+
+/* Right Buttons */
+.nav-right {
+  display: flex;
+  gap: 1rem;
+  margin-right: 2rem;
+}
+
+.contact-btn {
+  background-color: var(--abbu-green);
+  color: var(--text-dark);
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 550;
+}
+
+/* Main content placeholder */
+.main-container {
+  min-height: calc(100vh - 200px);
+  padding: 2rem;
+}
+
+/* Footer */
+.footer {
+  height: 150px;
+  background-image: url('images/Screenshot 2025-07-15 233902.png');
+  background-size: cover;
+  background-position: center;
+}
