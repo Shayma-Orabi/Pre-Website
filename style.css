@@ -20,7 +20,9 @@
 }
 
 body, html {
-  height: 100%;
+   height: 100%;
+  display: flex;
+  flex-direction: column;
   background-color: var(--abbu-blue); 
   color: var(--abbu-sand);
 }
@@ -90,10 +92,11 @@ body, html {
 }
 
 .main-container {
-  padding: calc( 150* var(--screenWidthInPX) / 1920) 0 0;
   position: relative;
-  overflow: hidden;
-  height: 80%;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
 }
 
 .image-grid {
