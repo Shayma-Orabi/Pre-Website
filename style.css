@@ -31,7 +31,7 @@ body, html {
   position: fixed;
   top: 0;
   left: 0;
-  font-size: calc( 60* var(--screenWidthInPX) / 1920) ; 
+  font-size: calc( 50* var(--screenWidthInPX) / 1920) ; 
   pointer-events: none; 
   transform: translate(-50%, -50%);
   z-index: 9999; 
@@ -41,7 +41,7 @@ body, html {
   position: fixed;
   top: 0;
   left: 0;
-  font-size: calc( 40* var(--screenWidthInPX) / 1920) ; 
+  font-size: calc( 30* var(--screenWidthInPX) / 1920) ; 
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 9999;
@@ -54,12 +54,17 @@ body, html {
   padding: calc( 20* var(--screenWidthInPX) / 1920) calc( 40* var(--screenWidthInPX) / 1920) 0;
   background-color: var(--abbu-blue);
   width: 100%;
+  flex-direction: row;
+  direction: ltr;
 }
-
+.navbar.rtl {
+  flex-direction: row-reverse;
+  direction: rtl;
+}
 .nav-left {
   display: flex;
   gap: calc( 60* var(--screenWidthInPX) / 1920);
-  margin-left: calc( 40* var(--screenWidthInPX) / 1920);
+  margin-inline-start: calc(40 * var(--screenWidthInPX) / 1920);
 }
 
 .nav-btn {
@@ -91,16 +96,19 @@ body, html {
 .nav-right {
   display: flex;
   gap: calc( 20* var(--screenWidthInPX) / 1920);
-  margin-right: calc( 50* var(--screenWidthInPX) / 1920);
-}
+  margin-inline-end: calc(50 * var(--screenWidthInPX) / 1920);
 
+}
+.navbar span{
+    font-size: calc( 22* var(--screenWidthInPX) / 1920);
+
+}
 .contact-btn {
   background-color: var(--abbu-green);
   color: var(--text-dark);
   border: none;
   padding: calc( 15* var(--screenWidthInPX) / 1920) calc( 25* var(--screenWidthInPX) / 1920);
   border-radius: 8px;
-  font-size: calc( 20* var(--screenWidthInPX) / 1920);
   cursor: pointer;
   font-weight: 550;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -128,7 +136,7 @@ body, html {
 
 .image-container {
   position: relative;
-  height: calc( 200* var(--screenWidthInPX) / 1920);
+  height: calc( 250* var(--screenWidthInPX) / 1920);
   overflow: hidden;
   border-radius: calc( 15* var(--screenWidthInPX) / 1920);
   z-index: 10;
@@ -263,6 +271,10 @@ body, html {
   }
 .navbar{
     padding: calc( 18* var(--screenWidthMobileInPX) / 775) calc( 40* var(--screenWidthMobileInPX) / 775) 0;
+}
+.navbar span{
+    font-size: calc( 20* var(--screenWidthMobileInPX) / 775);
+
 }
 .nav-left {
   gap: calc( 30* var(--screenWidthMobileInPX) / 775);

@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.querySelector('.background-lines');
   const backgrounds = ['#E57F54', '#1AA69D', '#E3AE6D', '#F2EED5'];
-  const largeNums = [30, 35, 40, 50];
+  const largeNums = [10, 15, 20, 30];
   const smallNums = [3, 4, 5, 6];
   const coordinates = { x: undefined, y: undefined };
 
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     el.style.left = coordinates.x + 'px';
     el.style.top = coordinates.y + 'px';
     container.appendChild(el);
-    setTimeout(() => el.remove(), 5000);
+    setTimeout(() => el.remove(), 1000);
   };
 
   const updateCoords = (e) => {
@@ -107,16 +107,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.getElementById('language-toggle');
   const enElements = document.querySelectorAll('.EN');
   const arElements = document.querySelectorAll('.AR');
+  const navbar = document.getElementById('navbar');
   let currentLanguage = 'EN';
 
   function switchLanguage() {
     if (currentLanguage === 'EN') {
       enElements.forEach((el) => (el.style.display = 'none'));
       arElements.forEach((el) => (el.style.display = 'inline'));
+      navbar.classList.add('rtl')
       currentLanguage = 'AR';
     } else {
       enElements.forEach((el) => (el.style.display = 'inline'));
       arElements.forEach((el) => (el.style.display = 'none'));
+      navbar.classList.remove('rtl')
       currentLanguage = 'EN';
     }
   }
