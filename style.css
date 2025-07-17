@@ -25,6 +25,26 @@ body, html {
   flex-direction: column;
   background-color: var(--abbu-blue); 
   color: var(--abbu-sand);
+  cursor: none;
+}
+#monkey {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: calc( 60* var(--screenWidthInPX) / 1920) ; 
+  pointer-events: none; 
+  transform: translate(-50%, -50%);
+  z-index: 9999; 
+}
+
+#banana {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: calc( 40* var(--screenWidthInPX) / 1920) ; 
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
 }
 
 .navbar {
@@ -54,7 +74,7 @@ body, html {
 }
 
 .nav-btn:hover {
-  opacity: 0.8;
+  opacity: 0.8; 
 }
 
 .nav-center {
@@ -108,7 +128,7 @@ body, html {
 
 .image-container {
   position: relative;
-  height: calc( 300* var(--screenWidthInPX) / 1920);
+  height: calc( 200* var(--screenWidthInPX) / 1920);
   overflow: hidden;
   border-radius: calc( 15* var(--screenWidthInPX) / 1920);
   z-index: 10;
@@ -174,7 +194,7 @@ body, html {
 }
 
 
-/* === LINE ANIMATION === */
+/*LINE ANIMATION */
 .line {
   position: absolute;
   border-radius: 1em;
@@ -236,6 +256,7 @@ body, html {
 #AR{
   font-family:"El Messiri", sans-serif ;
 }
+/*Responsive*/
 @media only screen and (max-width: 775px){
   *{
     letter-spacing: 0.5px;
@@ -301,5 +322,14 @@ body, html {
 
 .line-high {
   display: none;
+}
+#monkey {
+  font-size: calc( 40* var(--screenWidthMobileInPX) / 775);
+  top: 10%;
+  left: 10%;}
+#banana {
+  font-size: calc( 30* var(--screenWidthMobileInPX) / 775);
+  top: 10%;
+  left: 10%;
 }
 }

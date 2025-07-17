@@ -1,4 +1,4 @@
-// === Background Lines Animation ===
+//Lines animation background
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.querySelector('.background-lines');
   const backgrounds = ['#E57F54', '#1AA69D', '#E3AE6D', '#F2EED5'];
@@ -49,8 +49,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('mousemove', updateCoords);
 });
+ const monkey = document.getElementById('monkey');
+  let mouseX = 0, mouseY = 0;
+  let currentX = 0, currentY = 0;
 
-// === Set Responsive Screen Width Variables ===
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  function animate() {
+    currentX += (mouseX - currentX) * 0.05;
+    currentY += (mouseY - currentY) * 0.05;
+    monkey.style.left = `${currentX}px`;
+    monkey.style.top = `${currentY}px`;
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  const banana = document.getElementById('banana');
+  document.addEventListener('mousemove', (e) => {
+    banana.style.left = `${e.clientX}px`;
+    banana.style.top = `${e.clientY}px`;
+  });
+const clickableElements = document.querySelectorAll('a, button, input, [role="button"], [onclick]');
+
+clickableElements.forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    monkey.style.display = 'none';
+    banana.style.display = 'none';
+  });
+  el.addEventListener('mouseleave', () => {
+    monkey.style.display = 'block';
+    banana.style.display = 'block';
+  });
+});
 function updateScreenWidthVars() {
   const width =
     window.innerWidth ||
