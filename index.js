@@ -131,3 +131,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // Attach toggle
   toggleButton.addEventListener('click', switchLanguage);
 });
+
+// Team Modal 
+document.getElementById('open-team-modal').addEventListener('click', function (e) {
+  e.preventDefault();
+  document.getElementById('team-modal').style.display = 'flex';
+});
+
+document.getElementById('close-team-modal').addEventListener('click', function () {
+  document.getElementById('team-modal').style.display = 'none';
+});
+
+window.addEventListener('click', function (e) {
+  const modal = document.getElementById('team-modal');
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+

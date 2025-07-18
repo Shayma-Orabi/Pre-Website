@@ -234,22 +234,7 @@ h1 {
   padding: 30px 10px; /* Adjust vertical spacing as needed */
   overflow: hidden;
 }
-/* .footer-img {
-  width: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-  position: static;
-  height: 85px;
-} */
-/* .footer-text {
-  text-align: center;
-  padding: 20px 10px;
-  font-size: calc(20 * var(--screenWidthInPX) / 1920);
-  color: var(--abbu-sand);
-  z-index: 2;
-  position: relative;
-} */
+
  .footer-overlay {
   position: relative;
   z-index: 1;
@@ -289,8 +274,8 @@ h1 {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  z-index: 1;
-
+  z-index: 1000;
+  pointer-events: none;
 }
 
 
@@ -455,3 +440,74 @@ body, html{
   cursor: default;
 }
 }
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: var(--abbu-blue);
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 900px;
+  width: 95%;
+  color: var(--abbu-sand);
+  position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  color: var(--abbu-sand);
+  cursor: pointer;
+}
+
+.team-cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.team-card {
+  background-color: var(--abbu-green);
+  color: var(--text-dark);
+  border-radius: 10px;
+  padding: 24px;
+  width: 260px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-card a {
+  margin-top: 10px;
+  display: inline-block;
+  color: var(--abbu-blue);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.team-card p a {
+  color: var(--abbu-blue);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+
