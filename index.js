@@ -107,19 +107,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.getElementById('language-toggle');
   const enElements = document.querySelectorAll('.EN');
   const arElements = document.querySelectorAll('.AR');
-  const navbar = document.getElementById('navbar');
+  const navOuter = document.querySelector('.nav-outer');
   let currentLanguage = 'EN';
 
   function switchLanguage() {
     if (currentLanguage === 'EN') {
       enElements.forEach((el) => (el.style.display = 'none'));
       arElements.forEach((el) => (el.style.display = 'inline'));
-      navbar.classList.add('rtl')
+      navOuter.classList.add('rtl')
       currentLanguage = 'AR';
     } else {
       enElements.forEach((el) => (el.style.display = 'inline'));
       arElements.forEach((el) => (el.style.display = 'none'));
-      navbar.classList.remove('rtl')
+      navOuter.classList.remove('rtl')
       currentLanguage = 'EN';
     }
   }

@@ -59,10 +59,19 @@ body, html {
   width: 100%;
   flex-direction: row;
   direction: ltr;
+
 }
-.navbar.rtl {
+.nav-outer {
+  display: flex;
+  justify-content: space-around;
+  padding: calc( 20* var(--screenWidthInPX) / 1920) calc( 40* var(--screenWidthInPX) / 1920) 0;
+  align-items: center;
+  width: 100%;
+  max-width: var(--screenWidthInPX);
+}
+
+.nav-outer.rtl {
   flex-direction: row-reverse;
-  direction: rtl;
 }
 .nav-left {
   display: flex;
@@ -86,8 +95,11 @@ body, html {
 }
 
 .nav-center {
+  position: absolute;
   text-align: center;
-  margin-top: calc( 20* var(--screenWidthInPX) / 1920);
+  top: calc( 20* var(--screenWidthInPX) / 1920);
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 10;
 }
 
@@ -214,12 +226,50 @@ h1 {
 .footer{
   z-index: 0;
   position: relative;
+  width: 100%;
+  background-image: url('images/footer.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 30px 10px; /* Adjust vertical spacing as needed */
+  overflow: hidden;
 }
-.footer-img {
+/* .footer-img {
   width: 100%;
   object-fit: cover;
+  object-position: center top;
   display: block;
   position: static;
+  height: 85px;
+} */
+/* .footer-text {
+  text-align: center;
+  padding: 20px 10px;
+  font-size: calc(20 * var(--screenWidthInPX) / 1920);
+  color: var(--abbu-sand);
+  z-index: 2;
+  position: relative;
+} */
+ .footer-overlay {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: var(--abbu-sand);
+  font-size: calc(20 * var(--screenWidthInPX) / 1920);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-link {
+  color: var(--abbu-green);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--abbu-orange);
 }
 
 
@@ -278,6 +328,7 @@ h1 {
 .AR{
   display: none;
   font-family: "El Messiri", sans-serif;
+   
 }
 #EN{
   font-family:'Alegreya Sans', sans-serif ;

@@ -15,22 +15,24 @@
 
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar " id ="navbar">
-    <div class="nav-left">
-      <button class="nav-btn"> <span class="EN">FAQS</span> <span class="AR">الأسئلة الشائعة</span></button>
-      <button class="nav-btn" id="language-toggle" >
-         <span id="AR" class="EN">العربية</span>
-          <img src="images/flag_AR.png" alt="flag" class="flag-icon EN">
-        <span id="EN"  class="AR">English</span><img src="images/flag_EN.png" alt="flag" class="flag-icon AR"></button>
-    </div>
+    <div class="nav-outer">
+      <div class="nav-left">
+        <button class="nav-btn"> <span class="EN">FAQS</span> <span class="AR">الأسئلة الشائعة</span></button>
+        <button class="nav-btn" id="language-toggle" >
+          <span id="AR" class="EN">العربية</span>
+            <img src="images/flag_AR.png" alt="flag" class="flag-icon EN">
+          <span id="EN"  class="AR">English</span><img src="images/flag_EN.png" alt="flag" class="flag-icon AR"></button>
+      </div>
 
+      <div class="nav-right">
+        <button class="contact-btn"> <span class="EN">Contact Us →</span> <span class="AR"> ← تواصل معنا</span> </button>
+      </div>
+    </div>
+    
     <div class="nav-center">
       <a href="index.html">
         <img src="images/Abbu.png" alt="Logo" class="logo">
       </a>
-    </div>
-
-    <div class="nav-right">
-      <button class="contact-btn"> <span class="EN">Contact Us →</span> <span class="AR"> ← تواصل معنا</span> </button>
     </div>
   </nav>
 
@@ -71,8 +73,12 @@
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <img src="images/footer.png" alt="abbu footer" class="footer-img">
-  </footer>
+  <div class="footer-overlay">
+    <p>Developed by Abbu <a href="index.html" class="footer-link">team</a>.</p>
+    <p>Copyrights © 2025 All Rights Reserved by Abbu.</p>
+  </div>
+</footer>
+
 
  
 <script src="index.js" defer></script>
