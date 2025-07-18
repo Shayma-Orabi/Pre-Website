@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 //Lines animation background
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.querySelector('.background-lines');
   const backgrounds = ['#E57F54', '#1AA69D', '#E3AE6D', '#F2EED5'];
   const largeNums = [10, 15, 20, 30];
   const smallNums = [3, 4, 5, 6];
+=======
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.background-lines');
+  const backgrounds = ['#E57F54', '#1AA69D', '#E3AE6D', '#F2EED5'];
+  const largeNums = [30, 35, 40, 50];
+  const smallNums = [3, 4, 5, 6];
+
+>>>>>>> a7842bf85212cb6850f069e93786dcabe04930bd
   const coordinates = { x: undefined, y: undefined };
 
   const rand = () => Math.floor(Math.random() * 4);
@@ -31,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     el.style.left = coordinates.x + 'px';
     el.style.top = coordinates.y + 'px';
     container.appendChild(el);
+<<<<<<< HEAD
     setTimeout(() => el.remove(), 1000);
   };
 
@@ -41,6 +51,19 @@ document.addEventListener('DOMContentLoaded', () => {
       Math.abs(coordinates.x - e.clientX) > 50 ||
       Math.abs(coordinates.y - e.clientY) > 50
     ) {
+=======
+    setTimeout(() => el.remove(), 5000); // Optional: clean up after 5s
+  };
+
+  const updateCoords = (e) => {
+    if (coordinates.x === undefined || coordinates.y === undefined) {
+      coordinates.x = e.clientX;
+      coordinates.y = e.clientY;
+      addLine();
+    }
+
+    if (Math.abs(coordinates.x - e.clientX) > 50 || Math.abs(coordinates.y - e.clientY) > 50) {
+>>>>>>> a7842bf85212cb6850f069e93786dcabe04930bd
       coordinates.x = e.clientX;
       coordinates.y = e.clientY;
       addLine();
@@ -49,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('mousemove', updateCoords);
 });
+<<<<<<< HEAD
  const monkey = document.getElementById('monkey');
   let mouseX = 0, mouseY = 0;
   let currentX = 0, currentY = 0;
@@ -87,10 +111,15 @@ clickableElements.forEach(el => {
 });
 function updateScreenWidthVars() {
   const width =
+=======
+function updateScreenWidthVars() {
+  let width =
+>>>>>>> a7842bf85212cb6850f069e93786dcabe04930bd
     window.innerWidth ||
     document.documentElement.clientWidth ||
     document.body.clientWidth;
 
+<<<<<<< HEAD
   const max = width < 1700 ? width : 1700;
   const mobile = width <= 775 ? width : 770;
 
@@ -131,3 +160,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // Attach toggle
   toggleButton.addEventListener('click', switchLanguage);
 });
+=======
+  document.documentElement.style.setProperty(
+    '--screenWidthInPX',
+    (width < 1700 ? width : 1700) + 'px'
+  );
+  document.documentElement.style.setProperty(
+    '--screenWidthMobileInPX',
+    (width <= 775 ? width : 775) + 'px'
+  );
+}
+
+window.addEventListener('load', updateScreenWidthVars);
+window.addEventListener('resize', updateScreenWidthVars);
+>>>>>>> a7842bf85212cb6850f069e93786dcabe04930bd
