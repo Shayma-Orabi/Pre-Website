@@ -52,7 +52,7 @@ body, html {
 
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: calc( 20* var(--screenWidthInPX) / 1920) calc( 40* var(--screenWidthInPX) / 1920) 0;
   background-color: var(--abbu-blue);
@@ -68,9 +68,9 @@ body, html {
 .nav-left {
   display: flex;
   gap: calc( 60* var(--screenWidthInPX) / 1920);
-  margin-inline-start: calc(10 * var(--screenWidthInPX) / 1920);
+  margin-inline-start: calc(200 * var(--screenWidthInPX) / 1920);
   position: relative;
-  margin-top: calc(40 * var(--screenWidthInPX) / 1920);
+  margin-top: calc(30 * var(--screenWidthInPX) / 1920);
 }
 
 .nav-btn {
@@ -105,9 +105,9 @@ body, html {
 .nav-right {
   display: flex;
   gap: calc( 20* var(--screenWidthInPX) / 1920);
-  margin-inline-end: calc(10 * var(--screenWidthInPX) / 1920);
+  margin-inline-end: calc(280 * var(--screenWidthInPX) / 1920);
   position: relative;
-  margin-top: calc(40 * var(--screenWidthInPX) / 1920);
+  margin-top: calc(30 * var(--screenWidthInPX) / 1920);
 }
 .navbar span{
     font-size: calc( 22* var(--screenWidthInPX) / 1920);
