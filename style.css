@@ -59,24 +59,18 @@ body, html {
   width: 100%;
   flex-direction: row;
   direction: ltr;
-
+  position: relative;
 }
-.nav-outer {
-  display: flex;
-  justify-content: space-around;
-  padding: calc( 20* var(--screenWidthInPX) / 1920) calc( 40* var(--screenWidthInPX) / 1920) 0;
-  align-items: center;
-  width: 100%;
-  max-width: var(--screenWidthInPX);
+.navbar.rtl {
+  direction: rtl; 
 }
 
-.nav-outer.rtl {
-  flex-direction: row-reverse;
-}
 .nav-left {
   display: flex;
   gap: calc( 60* var(--screenWidthInPX) / 1920);
-  margin-inline-start: calc(40 * var(--screenWidthInPX) / 1920);
+  margin-inline-start: calc(10 * var(--screenWidthInPX) / 1920);
+  position: relative;
+  margin-top: calc(40 * var(--screenWidthInPX) / 1920);
 }
 
 .nav-btn {
@@ -97,7 +91,7 @@ body, html {
 .nav-center {
   position: absolute;
   text-align: center;
-  top: calc( 20* var(--screenWidthInPX) / 1920);
+  top: calc( 30* var(--screenWidthInPX) / 1920);
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -111,8 +105,9 @@ body, html {
 .nav-right {
   display: flex;
   gap: calc( 20* var(--screenWidthInPX) / 1920);
-  margin-inline-end: calc(50 * var(--screenWidthInPX) / 1920);
-
+  margin-inline-end: calc(10 * var(--screenWidthInPX) / 1920);
+  position: relative;
+  margin-top: calc(40 * var(--screenWidthInPX) / 1920);
 }
 .navbar span{
     font-size: calc( 22* var(--screenWidthInPX) / 1920);
@@ -231,11 +226,16 @@ h1 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 30px 10px; /* Adjust vertical spacing as needed */
+  padding: 20px 10px; /* Adjust vertical spacing as needed */
   overflow: hidden;
+  min-height: 40px;
+  
+}
+.footer p {
+  min-height: 1.6em;
 }
 
- .footer-overlay {
+.footer-overlay {
   position: relative;
   z-index: 1;
   text-align: center;
@@ -508,6 +508,20 @@ body, html{
   color: var(--abbu-blue);
   text-decoration: underline;
   font-weight: 500;
+}
+
+.team-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px auto;
+  display: block;
+  border: 3px solid var(--abbu-blue);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.team-cards.rtl {
+  flex-direction: row-reverse;
 }
 
 

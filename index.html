@@ -9,22 +9,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;550;700&display=swap" rel="stylesheet">
 </head>
 
+<!-- ===== Team Modal ===== -->
 <div id="team-modal" class="modal">
   <div class="modal-content">
     <span class="close-button" id="close-team-modal">&times;</span>
-    <h2>Abbu Team</h2>
+    <h2><span class="EN">Abbu Team</span><span class="AR">فريق آبو</span></h2>
     <div class="team-cards">
       <div class="team-card">
+        <img src="images/team.png" alt="Basil Alnasan" class="team-image">
         <h3><span class="EN">Basil Alnasan</span><span class="AR">باسل النعسان</span></h3>
         <p> <a href="mailto:basil@abbu.io">basil@abbu.io</a></p>
         <a href="#" target="_blank"><span class="EN">View Portfolio</span><span class="AR">عرض الملف الشخصي</span></a>
       </div>
       <div class="team-card">
+        <img src="images/team.png" alt="Shayma Orabi" class="team-image">
         <h3><span class="EN">Shayma Orabi</span><span class="AR">شيماء عرابي</span></h3>
         <p> <a href="mailto:ShaymaOrabi@outlook.com">ShaymaOrabi@outlook.com</a></p>
         <a href="#" target="_blank"><span class="EN">View Portfolio</span><span class="AR">عرض الملف الشخصي</span></a>
       </div>
       <div class="team-card">
+        <img src="images/team.png" alt="Zayneb Mchich" class="team-image">
         <h3><span class="EN">Zayneb Mchich</span><span class="AR">زينب مشيش</span></h3>
         <p> <a href="mailto:zayneb@abbu.com">zayneb@abbu.com</a></p>
         <a href="#" target="_blank"><span class="EN">View Portfolio</span><span class="AR">عرض الملف الشخصي</span></a>
@@ -40,7 +44,6 @@
 
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar " id ="navbar">
-    <div class="nav-outer">
       <div class="nav-left">
         <button class="nav-btn"> <span class="EN">FAQS</span> <span class="AR">الأسئلة الشائعة</span></button>
         <button class="nav-btn" id="language-toggle" >
@@ -49,16 +52,15 @@
           <span id="EN"  class="AR">English</span><img src="images/flag_EN.png" alt="flag" class="flag-icon AR"></button>
       </div>
 
-      <div class="nav-right">
-        <button class="contact-btn"> <span class="EN">Contact Us →</span> <span class="AR"> ← تواصل معنا</span> </button>
+      <div class="nav-center">
+          <a href="index.html">
+            <img src="images/Abbu.png" alt="Logo" class="logo">
+          </a>
       </div>
-    </div>
-    
-    <div class="nav-center">
-      <a href="index.html">
-        <img src="images/Abbu.png" alt="Logo" class="logo">
-      </a>
-    </div>
+
+      <div class="nav-right">
+        <button class="contact-btn"> <span class="EN">Contact Us →</span> <span class="AR">  تواصل معنا ←</span> </button>
+      </div>
   </nav>
 
   <!-- ===== MAIN CONTENT ===== -->
@@ -99,7 +101,7 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
   <div class="footer-overlay">
-    <p><span class="EN">Developed by Abbu <a href="#" class="footer-link" id="open-team-modal">team</a>.</span><span class="AR">تم تطويره بواسطة <a href="#" class="footer-link" id="open-team-modal">فريق آبو</a>.</span></p>
+    <p><span class="EN">Developed by Abbu <a href="#" class="footer-link" id="open-team-modal-en"><span class="EN">team</span></a></span><span class="AR">تم تطويره بواسطة <a href="#" class="footer-link" id="open-team-modal-ar"><span class="AR">فريق آبو </span></a></span></p>
     <p><span class="EN">Copyrights © 2025 All Rights Reserved by Abbu.</span><span class="AR"> حقوق النشر © 2025 جميع الحقوق محفوظة لشركة آبو  </span></p>
   </div>
 </footer>

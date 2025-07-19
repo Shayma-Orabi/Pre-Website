@@ -107,19 +107,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.getElementById('language-toggle');
   const enElements = document.querySelectorAll('.EN');
   const arElements = document.querySelectorAll('.AR');
-  const navOuter = document.querySelector('.nav-outer');
+  const navbar = document.getElementById('navbar');
+  const teamCards = document.querySelector('.team-cards');
   let currentLanguage = 'EN';
 
   function switchLanguage() {
     if (currentLanguage === 'EN') {
       enElements.forEach((el) => (el.style.display = 'none'));
       arElements.forEach((el) => (el.style.display = 'inline'));
-      navOuter.classList.add('rtl')
+      navbar.classList.add('rtl')
+      teamCards.classList.add('rtl');
       currentLanguage = 'AR';
     } else {
       enElements.forEach((el) => (el.style.display = 'inline'));
       arElements.forEach((el) => (el.style.display = 'none'));
-      navOuter.classList.remove('rtl')
+      navbar.classList.remove('rtl')
+      teamCards.classList.remove('rtl');
       currentLanguage = 'EN';
     }
   }
@@ -133,7 +136,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Team Modal 
-document.getElementById('open-team-modal').addEventListener('click', function (e) {
+document.getElementById('open-team-modal-en').addEventListener('click', function (e) {
+  e.preventDefault();
+  document.getElementById('team-modal').style.display = 'flex';
+});
+document.getElementById('open-team-modal-ar').addEventListener('click', function (e) {
   e.preventDefault();
   document.getElementById('team-modal').style.display = 'flex';
 });
