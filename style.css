@@ -34,10 +34,10 @@ body, html {
   pointer-events: none; 
   transform: translate(-50%, -50%);
   z-index: 9999;  
-  width: calc( 50* var(--screenWidthInPX) / 1920) ;
+  width: calc( 30* var(--screenWidthInPX) / 1920) ;
 }
 #monkey img {
-  width:  calc( 100* var(--screenWidthInPX) / 1920) ;
+  width:  calc( 65* var(--screenWidthInPX) / 1920) ;
 }
 
 #banana {
@@ -329,53 +329,61 @@ h1 {
     flex-direction: column;
     align-items: center;
     gap: calc( 40* var(--screenWidthMobileInPX) / 775);
+    
   }
   h1{
-    font-size: calc( 30* var(--screenWidthMobileInPX) / 775);
-    margin-bottom: calc( 20* var(--screenWidthMobileInPX) / 775);
+    font-size: calc( 25* var(--screenWidthMobileInPX) / 775);
+    margin: calc( 20* var(--screenWidthMobileInPX) / 775);
+    
   }
   .image-container {
-    padding: calc( 20* var(--screenWidthMobileInPX) / 775) 0 0 ;
+    padding: calc( 20* var(--screenWidthMobileInPX) / 775)  ;
     height: auto;
+    border: none;
+ 
   }
   .image-container img {
-    height: calc( 250* var(--screenWidthMobileInPX) / 775);
-    padding: 0 0 calc( 20* var(--screenWidthMobileInPX) / 775) 0;
-    border-radius: calc( 10* var(--screenWidthMobileInPX) / 775);
+    height: calc( 325* var(--screenWidthMobileInPX) / 775);
+    border-radius: calc( 20* var(--screenWidthMobileInPX) / 775);
   }
   .flag-icon {
     width: calc( 30* var(--screenWidthMobileInPX) / 775);
     margin-left: calc( 3* var(--screenWidthMobileInPX) / 775);
   }
+    .image-container.abbu_analytics,
+  .image-container.abbu_warehouse,
+  .image-container.abbu_consultation {
+    box-shadow: none;
+    border-radius: calc( 20* var(--screenWidthMobileInPX) / 775);
+  }
+  .abbu_analytics img {
+    box-shadow: 0 0 10px var(--abbu-green), 0 0 10px var(--abbu-green);
+  }
+
+  .abbu_warehouse img {
+    box-shadow: 0 0 10px var(--abbu-orange), 0 0 10px var(--abbu-orange);
+  }
+
+  .abbu_consultation img {
+    box-shadow: 0 0 10px var(--abbu-gold), 0 0 10px var(--abbu-gold);
+  }
   .overlay{
     position: static;
     opacity: 1 !important;
-    background-color: var(--abbu-green);
     height:calc(60 * var(--screenWidthMobileInPX) / 775) ;
     color: var(--abbu-sand);
     flex-direction: column;
     padding: calc(10 * var(--screenWidthMobileInPX) / 775);
+    margin-top:calc(10 * var(--screenWidthMobileInPX) / 775) ;
   }
-  .abbu_warehouse .overlay {
-  background-color: var(--abbu-orange);
-}
-
-.abbu_analytics .overlay {
-  background-color: var(--abbu-green);
-}
-
-.abbu_consultation .overlay {
-  background-color: var(--abbu-gold);
-}
   .image-container a{
      text-decoration: none;
   }
   .overlay p {
-    font-size: calc( 16* var(--screenWidthMobileInPX) / 775);
-    color: var(--abbu-sand);
+    font-size: calc( 20* var(--screenWidthMobileInPX) / 775);
   }
   .main-container {
-    padding: calc( 100* var(--screenWidthMobileInPX) / 775) 0;
+    padding: calc( 50* var(--screenWidthMobileInPX) / 775) 0;
     height: auto;
   }
 
